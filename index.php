@@ -44,7 +44,9 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 </head>
 <body>
 <h1>Rubrica Contatti Personali</h1>
-
+<a href="#">Nuovo Contatto</a>
+<br/>
+<br/>
 <table border="1">
     <thead>
         <th>ID</th>
@@ -52,6 +54,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         <th>COGNOME</th>
         <th>TELEFONO</th>
         <th>EMAIL</th>
+        <th>AZIONI</th>
     </thead>
     <tbody>
     <?php
@@ -63,7 +66,8 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         echo "<td>" . $value["nome"] . "</td>";
         echo "<td>" . $value["cognome"] . "</td>";
         echo "<td>" . $value["telefono"] . "</td>";
-        echo "<td>" . $value["email"] . "</td></tr>";
+        echo "<td>" . $value["email"] . "</td>";
+        echo "<td><a href='#'>modifica</a> <a href='#'>elimina</a></td></tr>";
 
     }
 
